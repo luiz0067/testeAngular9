@@ -9,7 +9,7 @@ Run `npm install` download project dependencies.
 
 Run `ng serve` or `npm rum start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `npm rum start-server` start the server for mocks from api localhost on port 3000.
+Run `npm run start-server` start the server for mocks from api localhost on port 3000.
 
 ## Build
 
