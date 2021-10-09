@@ -1,0 +1,11 @@
+<app-card [titulo]="titulo" [loading]="dados.loading" (onRefresh)="atualizarDados()">
+
+  <canvas baseChart *ngIf="!dados.loading"
+          [datasets]="dados.datasets"
+          [labels]="dados.labels"
+          [options]="{ responsive: true }"
+          [legend]="false"
+          [chartType]="typeChart">
+  </canvas>
+
+</app-card>

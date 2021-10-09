@@ -1,0 +1,48 @@
+<div class="modal-header">
+  <h5 class="modal-title">{{grupo?.id ? 'Editando': 'Inserindo'}} grupo</h5>
+</div>
+<div class="modal-body m-3">
+
+  <form [formGroup]="formGroup" *ngIf="formGroup">
+
+
+
+
+    <div class="row">
+
+
+
+
+      <!-- Campo de descricao -->
+      <div class=" col-md-12 mt-1 form-group">
+        <label class="form-control-label">Descrição</label>
+        <input type="text" class="form-control" formControlName="descricao">
+        <app-message-valid-control [control]="descricao!"> </app-message-valid-control>
+      </div>
+
+
+      <!-- Mostra as informações de datas -->
+      <div class="col-md-6 mt-3 text-info" *ngIf="grupo?.dateInsert">
+        Data da Inclusão: {{grupo?.dateInsert | date : 'dd/MM/yyyy HH:mm:ss'}}
+      </div>
+      <div class="col-md-6 mt-3 text-info" *ngIf="grupo?.dateUpdate">
+        Data da Atualização: {{grupo?.dateUpdate | date : 'dd/MM/yyyy HH:mm:ss'}}
+      </div>
+      </div>
+
+
+  </form>
+
+</div>
+<div class="modal-footer">
+  <!-- Botão para salvar o usuário -->
+  <button class="btn btn-success" (click)="salvar()">
+    <i class="fa fa-save mr-2"></i>
+    Salvar
+  </button>
+  <!-- Botão para excluír o usuário (só mostra se já tiver ID, senão não precisa excluir poir nem inseriu) -->
+  <button class="btn btn-danger" (click)="excluir()" *ngIf="grupo?.id">
+    <i class="fa fa-delete mr-2"></i>
+    Excluír
+  </button>
+</div>
