@@ -1,0 +1,15 @@
+{
+  "/auth/login": "/authInfo",
+  "/auth/info": "/authInfo",
+  "/usuarios": "/users",
+  "/usuarios/:id": "/users/:id",
+  "/grupos": "/grupos",
+  "/grupos/:id": "/grupos/:id",
+  "/produtos": "/produtos",
+  "/produtos/:id": "/produtos/:id",
+  "/produtos?grupoId=:id": "/produtos?grupoId=:id",
+  "/clientes": "/clientes",
+  "/clientes/:id": "/clientes/:id",
+  "/graficos/vendas-por-mes": "/vendasPorMes",
+  "/cidades/": "/cidades"
+}
